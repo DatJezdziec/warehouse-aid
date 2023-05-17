@@ -1,0 +1,35 @@
+<!-- Create an input element and a button element -->
+<input id="input" type="text" placeholder="Enter some text">
+<button id="button">Add to table</button>
+<!-- Create a table element -->
+<table id="table"></table>
+<!-- Create another button element to export to CSV -->
+<button (click)="exportTableToCSV('table.csv')">Export to CSV</button>
+<!-- Create a file input element to upload CSV file -->
+<label>Upload CSV File
+    <!-- Create an input element and a button element -->
+    <input id="input" type="text" placeholder="Enter some text">
+    <button id="button">Add to table</button>
+    <!-- Create a table element -->
+    <table id="table"></table>
+    <!-- Create another button element to export to CSV -->
+    <button (click)="exportTableToCSV('table.csv')">Export to CSV</button>
+    <!-- Create a file input element to upload CSV file -->
+    <label>Upload CSV File:</label>
+    <input type="file" #fileImportInput (change)="fileChangeListener($event)" accept=".csv" />
+    <!-- Create another table element to display CSV file -->
+    <table *ngIf="csvRecords.length > 0">
+        <thead>
+            <tr>
+                <!-- Loop through the keys of the first record to create table headers -->
+                <th *ngFor="let key of Object.keys(csvRecords[0])">{{key}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Loop through the csv records to create table rows -->
+            <tr *ngFor="let record of csvRecords">
+                <!-- Loop through the values of each record to create table cells -->
+                <td *ngFor="let value of Object.values(record)">{{value}}</td>
+            </tr>
+        </tbody>
+    </table>

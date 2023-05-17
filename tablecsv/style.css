@@ -1,0 +1,30 @@
+/* Define a grid layout for the container */
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+  grid-template-rows: auto auto; /* Two rows */
+  gap: 10px; /* Gap between grid items */
+}
+
+/* Style the input form */
+#input-form {
+  grid-column: span 4; /* Span four columns */
+}
+
+/* Style the input text */
+#input-text {
+  width: 100%; /* Full width */
+}
+
+/* Style the grid container */
+#grid-container {
+  grid-column: span 4; /* Span four columns */
+  display: grid; /* Nested grid layout */
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Responsive columns */
+}
+
+/* Style the grid items */
+#grid-container div {
+  padding: 10px; /* Some padding */
+  border: 1px solid black; /* Black border */
+}

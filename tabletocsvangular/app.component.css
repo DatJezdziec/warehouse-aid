@@ -1,0 +1,15 @@
+/* Add some style to the input and button elements */
+input, button {
+    margin: 10px;
+  }
+  
+  /* Add some style to the table elements */
+  table {
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid black;
+    padding: 5px;
+  }
+  

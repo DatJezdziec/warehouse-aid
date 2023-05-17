@@ -1,0 +1,2 @@
+=JEŻELI.BŁĄD(WYSZUKAJ.PIONOWO(A15;Arkusz1!$A$2:$D$129;2;FAŁSZ);"błąd")
+Twr_Kod in ('783940','780780')
